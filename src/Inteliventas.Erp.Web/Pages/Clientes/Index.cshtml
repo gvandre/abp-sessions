@@ -1,0 +1,37 @@
+﻿@page
+@using Inteliventas.Erp.Localization
+@using Inteliventas.Erp.Permissions
+@using Inteliventas.Erp.Web.Pages.Clientes
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.Extensions.Localization
+
+@inject IAuthorizationService AuthorizationService
+
+@model IndexModel
+@inject IStringLocalizer<ErpResource> L
+@section scripts
+{
+    <abp-script src="/Pages/Clientes/Index.js" />
+}
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <h2>@L["Clients"]</h2>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+                @if (await AuthorizationService.IsGrantedAsync(ErpPermissions.Clientes.Create))
+                {
+                    <abp-button id="NuevoCliente"
+                                text="@L["NewClient"].Value"
+                                icon="plus"
+                                button-type="Primary" />
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="ClientesTabla"></abp-table>
+    </abp-card-body>
+</abp-card>
+

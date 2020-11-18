@@ -1,0 +1,33 @@
+{
+  "culture": "en",
+  "texts": {
+    "Menu:Home": "Home",
+    "Welcome": "Welcome",
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "Menu:Erp": "Masters",
+    "Menu:Clients": "Clients",
+    "Menu:Vendors": "Vendors",
+    "Actions": "Actions",
+    "Close": "Close",
+    "Delete": "Delete",
+    "Edit": "Edit",
+    "RUC": "Ruc",
+    "DNI": "DNI",
+    "Name": "Name",
+    "Ce": "Immigration Card",
+    "CreationTime": "Creation time",
+    "AreYouSure": "Are you sure?",
+    "AreYouSureToDelete": "Are you sure you want to delete this item?",
+    "ClientDeletionConfirmationMessage": "Are you sure to delete the client '{0}'?",
+    "SuccessfullyDeleted": "Successfully deleted!",
+    "NewClient": "New Client",
+    "NewVendor": "New Vendor",
+    "Erp:00001": "There is already an client with {typeDoc}:{doc}",
+    "Erp:00002": "Client not data: ruc, dni o ce are empty",
+    "Permission:Erp": "Erp System",
+    "Permission:Clients": "Clients Management",
+    "Permission:Clients.Create": "Creating new Clients",
+    "Permission:Clients.Edit": "Editing the Clients",
+    "Permission:Clients.Delete": "Deleting the Clients"
+  }
+}

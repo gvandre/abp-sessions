@@ -1,0 +1,29 @@
+﻿@page
+@using Inteliventas.Erp.Localization
+@using Inteliventas.Erp.Web.Pages.Vendedores
+@using Microsoft.Extensions.Localization
+@model IndexModel
+@inject IStringLocalizer<ErpResource> L
+@section scripts
+{
+    <abp-script src="/Pages/Vendedores/Index.js" />
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <h2>@L["Vendors"]</h2>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+                <abp-button id="NuevoVendedor"
+                            text="@L["NewVendor"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="VendedoresTabla"></abp-table>
+    </abp-card-body>
+</abp-card>
